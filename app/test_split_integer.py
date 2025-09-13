@@ -7,11 +7,11 @@ def test_sum_of_the_parts_should_be_equal_to_value() -> None:
 
 
 def test_should_split_into_equal_parts_when_value_divisible_by_parts() -> None:
-    result = split_integer(13, 3)
-    assert result == [3, 3]
-    assert len(result) == 3
-    assert max(result) - min(result) <= 1
-    assert all(isinstance(x, int) for x in result)
+    result2 = split_integer(13, 3)
+    assert result2 == [4, 4, 5]
+    assert len(result2) == 3
+    assert max(result2) - min(result2) <= 1
+    assert all(isinstance(x, int) for x in result2)
 
 
 def test_should_return_part_equals_to_value_when_split_into_one_part() -> None:
@@ -25,7 +25,7 @@ def test_parts_should_be_sorted_when_they_are_not_equal() -> None:
 
 
 def test_should_add_zeros_when_value_is_less_than_number_of_parts() -> None:
-    result = split_integer(3, 5)
-    assert result == [0, 0, 1, 1, 1]
-    assert max(result) - min(result) <= 1
-    assert all(isinstance(x, int) for x in result)
+    result1 = split_integer(3, 5)
+    assert result1 == [0, 0, 1, 1, 1]
+    assert max(result1) - min(result1) <= 1
+    assert all(isinstance(x, int) for x in result1)
