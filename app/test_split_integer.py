@@ -2,14 +2,14 @@ from app.split_integer import split_integer
 
 
 def test_sum_of_the_parts_should_be_equal_to_value() -> None:
-    assert sum(split_integer(8, 1)) == 8, \
-        "Sum of the parts should be equal to 8"
+    assert sum(split_integer(6, 2)) == [3, 3]
+    assert sum(split_integer(17, 4)) == [4, 4, 4, 5]
 
 
 def test_should_split_into_equal_parts_when_value_divisible_by_parts() -> None:
     result2 = split_integer(13, 3)
     assert result2 == [4, 4, 5]
-    assert len(result2) == 3
+    assert len(result2) == 2
     assert max(result2) - min(result2) <= 1
     assert all(isinstance(x, int) for x in result2)
 
